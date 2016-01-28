@@ -51,17 +51,12 @@ if VCAP_CONFIG:
         # Looking for an instance of a Mongo Bluemix Service
         if key.startswith('mongo'):
             mongo_creds = decoded_config[key][0]['credentials']
-            seq = (r'^mongodb\:\/\/(?P<username>[_\w]+):(?P<password>[-\w]+)@'
-                   '(?P<host>[\.\w]+):(?P<port>\d+)/(?P<database>[_\w]+).*?$')
-            regex = re.compile(seq)
-            match = regex.search(mongo_creds['uri'])
-            # Deconstruct MongoURL connection information
-            parseURI = match.groupdict()
-            MONGO_HOST = parseURI['host']
-            MONGO_PORT = int(parseURI['port'])
-            MONGO_USERNAME = parseURI['username']
-            MONGO_PASSWORD = parseURI['password']
-            MONGO_DBNAME = parseURI['database']
+            
+            MONGO_HOST = mongo_creds['host']
+            MONGO_PORT = int(mongo_creds['port'])
+            MONGO_USERNAME = mongo_creds['username']
+            MONGO_PASSWORD = mongo_creds['password']
+            MONGO_DBNAME = mongo_creds['db']
             continue
         # Looking for an instance of Redis
         elif key.startswith('redis'):
