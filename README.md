@@ -9,7 +9,7 @@ This project is a [Python-Eve Framework](http://python-eve.org/) application (Fl
 - [Live Demo](http://macreduce.mybluemix.net/api/v1/mac)
 - Cloud [~10 mins == A publicly visible deploy in the cloud.  Sweet!]
 
-  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibmjstart/bluemix-python-eve-sample.git)
+  [![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/onthebeachh/bluemix-python-eve-sample.git)
 
 - Local Dev
   1. Clone this repository to your local machine
